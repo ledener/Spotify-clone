@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Circular-Medium;
+}
+@font-face {
+    font-family: circular;
+    src: url(../Clone-Spotify/assets/fonts/Circular-Medium.woff);
+}
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    grid-template-areas:
+    "header header header"
+    "content content content"
+    "footer footer footer";
+    column-gap: 30px;
+
+    .header{
+        display: flex;
+        justify-content: space-around;
+        grid-area: header;
+        background-color: black;
+        height: 80px;
+        width: 100%;
+        margin: 0 auto;
+        &-icons {
+                  height: 100%;
+                  max-width: fit-content;
+                  display: flex;
+                  align-items: center;
+                
+
+                    img{
+                        width: 54px;
+                    }
+                
+                    span {
+                        font-family: circular;
+                        font-size: 27px;
+                        line-height: 27px;
+                        letter-spacing: -0.065em;
+                        color: #FFFFFF;
+
+                    }
+        }
+        .header-nav {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items:center;
+           color: #FFFFFF;
+            list-style: none;
+
+            li{
+                font-family: circular;
+                font-size: 16px;
+                color: #FFFFFF;
+                }
+
+            li+li {
+                margin-left:34px
+            }
+
+        }
+    }
+}
